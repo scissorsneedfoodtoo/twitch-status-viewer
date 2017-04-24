@@ -1,0 +1,178 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.content {
+  flex: 1;
+}
+
+input::-webkit-input-placeholder {
+color: rgba(100, 65, 164, .55); !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: rgba(100, 65, 164, .55); !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: rgba(100, 65, 164, .55); !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: rgba(100, 65, 164, .55); !important;  
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.app-wrapper {
+  margin: 20px auto;
+  text-align: center;
+  max-width: 90%;
+  background-color: #fff;
+}
+
+.btn {
+  height: 50px;
+  font-size: 1.1em;
+  color: rgb(100, 65, 164);
+  border-radius: 0%;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: none;
+}
+
+.search-div {
+  width: 100%;
+  margin: 15px auto;
+  position: relative;
+  color: #aaa;
+  font-size: 1.1em;
+}
+
+.search-div input {
+  width: 55%;
+  height: 32px;
+  border: .5px solid;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgb(100, 65, 164);
+  text-indent: 32px;
+  outline: none;
+  color: rgba(100, 65, 164, .55);
+}
+
+.icon {
+  position: absolute;
+  top: 23%;
+  left: 25%;
+  color: rgba(100, 65, 164, .55);
+}
+
+.twitch-channels-list > a {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.twitch-channels-list .row {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #aaa;
+  width: 270px;
+  /*   width: 290px; */
+  /*   min-width: 250px;
+  max-width: 300px; */
+  min-height: 120px;
+}
+
+.twitch-channels-list p {
+  font-size: 1.1em;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+}
+
+.username {
+  color: black;
+}
+
+.offline .row {
+  background-color: rgba(0, 0, 0, .15);
+}
+
+.online .row {
+  /*   box-shadow: 0 1px 2px rgb(100,65,164); */
+  background-color: rgba(100, 65, 164, .55);
+}
+
+.dne .row {
+  background-color: rgba(255, 255, 0, .4);
+}
+
+.footer {
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+@media (min-width: 359px) {
+  .twitch-channels-list .row {
+    width: 300px;
+  }
+}
+
+@media (min-width: 411px) {
+  .twitch-channels-list .row {
+    width: 350px;
+  }
+}
+
+@media (min-width:) {
+  
+}
+
+@media (min-width: 510px) {
+  .btn {
+    height: 50px;
+    font-size: 1.25em;
+  }
+  
+  .twitch-channels-list .row {
+    width: 420px;
+  }
+}
+
+@media (min-width: 549px) {
+  .btn {
+    height: 50px;
+    font-size: 1.25em;
+  }
+  
+  .app-wrapper {
+    width: 500px;
+  }
+  
+  .twitch-channels-list .row {
+    width: 470px;
+  }
+}
