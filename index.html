@@ -1,56 +1,57 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <title>Twitch Status Viewer</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <script type="text/javascript" src="js/main.js"></script>
-</head> 
-<!-- end head -->
+  <head>
+    <title>Twitch Status Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/main.js"></script>
+  </head> 
+  <!-- end head -->
 
-<body>
-  <div class="content">
-    <div class="app-wrapper">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="btn-group btn-group-justified" role="group">
-            <div class="btn-group" role="group">
-              <button type="button" id="all" class="btn btn-default all">All</button>
+  <body>
+    <div class="content">
+      <div class="app-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button type="button" id="all" class="btn btn-default all">All</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" id="online" class="btn btn-default online">Online</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" id="offline" class="btn btn-default offline">Offline</button>
+              </div>
             </div>
-            <div class="btn-group" role="group">
-              <button type="button" id="online" class="btn btn-default online">Online</button>
-            </div>
-            <div class="btn-group" role="group">
-              <button type="button" id="offline" class="btn btn-default offline">Offline</button>
-            </div>
+            <!-- end button-bar -->
           </div>
-          <!-- end button-bar -->
-        </div>
-        <!-- end row -->
-          <div class="search-div">
-            <i class="fa fa-search icon" aria-hidden="true"></i>
-            <input class="live-search-box" type="text" placeholder="Search channels..." />
+          <!-- end row -->
+            <div class="search-div">
+              <i class="fa fa-search icon" aria-hidden="true"></i>
+              <input class="live-search-box" type="text" placeholder="Search channels..." />
+            </div>
+            <!-- end search-div -->
+          
+          <div class="twitch-channels-list">
           </div>
-          <!-- end search-div -->
-        
-        <div class="twitch-channels-list">
+          <!-- end twitch-channels-list -->
         </div>
-        <!-- end twitch-channels-list -->
+        <!-- end container-fluid -->
       </div>
-      <!-- end container-fluid -->
+      <!-- end app-wrapper -->
     </div>
-    <!-- end app-wrapper -->
-  </div>
-  <!-- end content -->
+    <!-- end content -->
 
-  <footer class="footer">
-    <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> and <i class="fa fa-coffee" aria-hidden="true"></i><br>by Kristofer Koishigawa</p>
-  </footer>
-  <!-- end footer -->
-</body>
-<!-- end body -->
+    <footer class="footer">
+      <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> and <i class="fa fa-coffee" aria-hidden="true"></i><br>by Kristofer Koishigawa</p>
+    </footer>
+    <!-- end footer -->
+  </body>
+  <!-- end body -->
+</html>
