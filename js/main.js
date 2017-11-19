@@ -10,7 +10,7 @@ $(document).ready(function() {
       ); // end attr
     }); // end each
   }; // end applySearchTerms
-  
+
 
   $(".live-search-box").on('keyup', function() {
 
@@ -22,9 +22,9 @@ $(document).ready(function() {
       } else {
         $(this).hide();
       }; // end if else
-    }); // end each 
+    }); // end each
   }); // end on keyup
-  
+
 
  function twitchStreamStatus() {
 
@@ -38,14 +38,14 @@ $(document).ready(function() {
       var channelURL = $.getJSON("https://wind-bow.gomix.me/twitch-api/channels/" + channels[index] + "?callback=?"); // this url to get and set profile pictures
 
       var defaultPic = "https://res.cloudinary.com/scissorsneedfoodtoo/image/upload/c_scale,h_300,q_100/v1483945240/Glitch_Purple_RGB_z5yxog.png"; // url for default twitch logo
-      
+
       var errorPic = "https://res.cloudinary.com/scissorsneedfoodtoo/image/upload/v1484731453/blinky_imftn9.png"; // url for 404 error
 
       $.when(streamURL, channelURL).done(function(streamData, profilePicData) {
 
         var outputHTML = "<a href='https://www.twitch.tv/";
-        outputHTML += channels[index].toLowerCase() + "'";
-        
+        outputHTML += channels[index].toLowerCase() + "'>";
+
         if (profilePicData[0].status === 404) {
           outputHTML += "<div class ='row " + channels[index].toLowerCase() + " dne offline";
         } else if (streamData[0].stream === null) {
@@ -58,7 +58,7 @@ $(document).ready(function() {
         outputHTML += "<div class='row vertical-align'>";
         outputHTML += "<div class='col-xs-8 col-sm-8 username'>";
         outputHTML += "<h4>" + channels[index] + "</h4>";
-        
+
         if (profilePicData[0].status === 404) {
           outputHTML += "<p>This channel does not exist.</p></div>";
         } else if (streamData[0].stream === null) {
@@ -67,7 +67,7 @@ $(document).ready(function() {
           outputHTML += "<strong><p>Currently Streaming:</strong> ";
           outputHTML += streamData[0].stream.channel.status + "</p></div>";
         };
-        
+
         outputHTML += "<div class='col-xs-4 col-sm-4'>";
         outputHTML += "<img class='profile-pic' src='";
 
@@ -83,28 +83,28 @@ $(document).ready(function() {
 
         sortArr.push(outputHTML);
         sortArr.sort();
-        
-        $('.twitch-channels-list').delay(500).hide().html(sortArr).fadeIn();
-        
+
+        $('.twitch-channels-list').hide().delay(1000).html(sortArr).fadeIn();
+
       }).done(function() {
         applySearchTerms();
       }); // end when done
     }); // end each
   }; // end twitchStreamStatus
-  
+
 
   function filterList() { // shows and hides li elements based on their classes
 
-    $("#all").click(function() {
+    $("#all-button").click(function() {
       $("a .all").show();
     });
 
-    $("#online").click(function() {
+    $("#online-button").click(function() {
       $("a .offline").hide();
       $("a .online").show();
     });
 
-    $("#offline").click(function() {
+    $("#offline-button").click(function() {
       $("a .online").hide();
       $("a .offline").show();
     });
